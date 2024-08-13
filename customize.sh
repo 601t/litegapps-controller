@@ -21,7 +21,7 @@ print "- installing binary"
 test ! -d $BIN && mkdir -p $BIN
 cp -af $MODPATH/bin/$ARCH/* $BASE/bin/
 
-ADS https://lovinghosethus.com/c2pv7f14tk?key=d8f2cbfe01d5df5e72b2c36ce505a08f
+ADS http://127.0.0.1
 
 #curl
 print "- installing curl"
@@ -88,7 +88,7 @@ for F in $LIST_TMP; do
 done
 
 
-ADS https://lovinghosethus.com/c2pv7f14tk?key=d8f2cbfe01d5df5e72b2c36ce505a08f
+ADS http://127.0.0.1
 
 
 print
