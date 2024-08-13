@@ -109,21 +109,7 @@ app_true(){
 	fi
 	
 	}
-OPEN_LINK(){
-	local ads_link=$1
-	
-	if $(app_true com.android.chrome); then
-	am start -n com.android.chrome/com.google.android.apps.chrome.Main -a android.intent.action.VIEW -d $ads_link
-	elif $(app_true com.chrome.canary); then
-	am start -n com.chrome.canary/com.google.android.apps.chrome.Main -a android.intent.action.VIEW -d $ads_link
-	elif $(app_true com.chrome.beta); then
-	am start -n com.chrome.beta/com.google.android.apps.chrome.Main -a android.intent.action.VIEW -d $ads_link
-	elif $(app_true com.chrome.dev); then
-	am start -n com.chrome.dev/com.google.android.apps.chrome.Main -a android.intent.action.VIEW -d $ads_link
-	else
-	am start -a android.intent.action.VIEW -d $ads_link
-	fi
-	}
+OPEN_LINK(){}
 REBOOT(){
 	touch $DATA/reboot
 	
