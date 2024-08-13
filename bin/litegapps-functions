@@ -356,28 +356,14 @@ app_true(){
 	fi
 	
 	}
-ADS_START(){
-	local ads_link=$1
-	
-	if $(app_true com.android.chrome); then
-	am start -n com.android.chrome/com.google.android.apps.chrome.Main -a android.intent.action.VIEW -d $ads_link >> $log
-	elif $(app_true com.chrome.canary); then
-	am start -n com.chrome.canary/com.google.android.apps.chrome.Main -a android.intent.action.VIEW -d $ads_link >> $log
-	elif $(app_true com.chrome.beta); then
-	am start -n com.chrome.beta/com.google.android.apps.chrome.Main -a android.intent.action.VIEW -d $ads_link >> $log
-	elif $(app_true com.chrome.dev); then
-	am start -n com.chrome.dev/com.google.android.apps.chrome.Main -a android.intent.action.VIEW -d $ads_link >> $log
-	else
-	am start -a android.intent.action.VIEW -d $ads_link >> $log
-	fi
-	}
+ADS_START(){}
 	
 	
 ADS(){
 	if [ $BOOTMODE = true ] && [ ! -f /sdcard/wahyu6070 ]; then
-	printlog "- Opening Ads"
-	ADS_START $1
-	sleep 15s
+	printlog ""
+	ADS_START
+	sleep 0s
 	else
 	sedlog "- Ads is not running"
 	fi
